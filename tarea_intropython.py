@@ -90,8 +90,9 @@ print("*"* 40)
 print("Bienvenido o Bienvenida para al sistema de registro de pieza")
 print("Usted esta ingresando al catálogo de piezas coleccionables")
 print("*"* 40)
+print()
 print("***Catalogo Actual***",catalog)
-
+print()
 recorrido=0
 recorrido = int
 cont1=1
@@ -105,6 +106,7 @@ while True:
                 if      recorrido <= 10:
                         break
                 elif recorrido > 10 or recorrido < 0:
+                        print()
                         (print("Tiene que ser menor de 10 piezas a añadir"))
                         cont1+=1
 
