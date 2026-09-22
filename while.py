@@ -24,7 +24,7 @@ catalog = {
                 "description": ""
         },
         "piezas4": {
-                "id": 3,
+                "id":4,
                 "name": "",
                 "category": "",
                 "price": 0,
@@ -32,7 +32,7 @@ catalog = {
                 "description": ""
         },
         "piezas5": {
-                "id": 3,
+                "id": 5,
                 "name": "",
                 "category": "",
                 "price": 0,
@@ -40,23 +40,23 @@ catalog = {
                 "description": ""
         },
         "piezas6": {
-        "id": 3,
-        "name": "",
-        "category": "",
-        "price":0,
-        "status": "",
-        "description": ""
+                "id": 6,
+                "name": "",
+                "category": "",
+                "price":0,
+                "status": "",
+                "description": ""
         },
         "piezas7": {
-        "id": 3,
-        "name": "",
-        "category": "",
-        "price": 0,
-        "status": "",
-        "description": ""
+                "id": 7,
+                "name": "",
+                "category": "",
+                "price": 0,
+                "status": "",
+                "description": ""
         },
         "piezas8": {
-                "id": 3,
+                "id": 8,
                 "name": "",
                 "category": "",
                 "price": 0,
@@ -65,7 +65,7 @@ catalog = {
 
         },
         "piezas9": {
-                "id": 3,
+                "id": 9,
                 "name": "",
                 "category": "",
                 "price": 0,
@@ -74,7 +74,7 @@ catalog = {
 
         },
         "piezas10": {
-                "id": 3,
+                "id": 10,
                 "name": "",
                 "category": "",
                 "price": 0,
@@ -110,12 +110,48 @@ while cont1 < 3:
 
 cont2 = 1
 while cont2 <= recorrido:
+        print("")
+        id_piece = input("Ingreso el identificador de la pieza " + str(cont2) + " : ")
+        catalog[f"piezas{cont2}"]["id"] = id_piece
+        print("")
         nombre = input("ingreso el nombre de la pieza " + str(cont2) + " : ")
         catalog[f"piezas{cont2}"]["name"]=nombre
-        categoria = input("ingreso la categoria")
-        catalog[f"piezas{cont2}"]["category"]=categoria
-        cont2+=1
+        print("")
+        categot = input("ingreso la categoria " + str(cont2) + " : ")
+        catalog[f"piezas{cont2}"]["category"]=categot
+        print("")
+        price = input("ingreso el precio de la pieza " + str(cont2) + " : ")
+        catalog[f"piezas{cont2}"]["price"] = price
+        print("")
+        while True:
+                print("Opciones de las piezas")
+                print("1. disponible")
+                print("2. reservada")
+                print("3. vendida")
+                status_piece = input("Solo ingrese una opcion del 1 al 3 de la pieza " + str(cont2) + " : ")
+                if status_piece == "1":
+                        status_piece = str(status_piece)
+                        status_available = status_piece
+                        catalog[f"piezas{cont2}"]["status"] = status_available
+                        break
+                elif status_piece == "2":
+                        status_piece = str(status_piece)
+                        status_available = status_piece
+                        catalog[f"piezas{cont2}"]["status"] = status_available
+                        break
+                elif status_piece == "3":
+                        status_piece = str(status_piece)
+                        status_available = status_piece
+                        catalog[f"piezas{cont2}"]["status"] = status_available
+                        break
+                else:
+                        print("Opcion invalida, ingrese opcion del 1 al 3")
 
+        print("")
+        description_piece = input("ingreso la categoria " + str(cont2) + " : ")
+        catalog[f"piezas{cont2}"]["description"] = description_piece
+        cont2+=1
+print()
 print("Catalogo actualizado: ", catalog)
 
 

@@ -1,8 +1,7 @@
 print()
 print("*"* 40)
-print()
-print("Bienvenido o Bienvenida para al sistema de registro de piezas")
-print()
+print("Bienvenido o Bienvenida para al sistema de registro de pieza")
+print("Usted esta ingresando al catálogo de piezas coleccionables")
 print("*"* 40)
 
 
